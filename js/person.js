@@ -75,8 +75,3 @@ $(".previous").click(function(){
         easing: 'easeInOutBack'
     });
 });
-
-$(".submit").click(function(){
-    return false;
-});
-

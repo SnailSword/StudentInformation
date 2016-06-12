@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/my.js"></script>
+</head>
+<body>
+    <div id="hpbackground"></div>
+    <div id="hpcontainer">
+        <nav>
+            <ul class="navList">
+                <li class="active" id="geoInfo"><a href="#">地理查询</a></li>
+                <li id="clsInfo"><a href="#">班级查询</a></li>
+                <li id="stuInfo"><a href="#">学生查询</a></li>
+                <li id="actInfo"><a href="#">活动查询</a></li>
+                <!--<li id="abtInfo"><a href="#">关于我们</a></li>-->
+            </ul>
+        </nav>
+        <div class="queryResult">
+            <div id="geo">这里放地图</div>
+            <div id="cls">这里放班级信息</div>
+            <div id="stu">这里放学生信息</div>
+            <div id="act">这里放活动信息</div>
+            <!--<div id="abt">这里放关于我们</div>-->
+        </div>
+        <div class="selector">
+            <form id="geoSelector">
+                <select id="id_provSelect" name="provSelect" onChange="loadCity(this.value);"><option value="">请选择省份</option></select>&nbsp;
+                <select id="id_citySelect" name="citySelect" onChange="loadArea(this.value);"><option value="">请选择城市</option></select>&nbsp;
+                <select id="id_areaSelect" name="areaSelect"><option value="">请选择区域</option></select>&nbsp;
+                <input name="prov" id="prov" type="text" style="display: none;">
+                <input name="city" id="city" type="text" style="display: none;">
+                <input type="button" name="submit" value="提交查询">
+            </form>
+            <form id="clsSelector">
+                <select><option>请输入学号</option></select>
+                <input type="button" name="submit" value="提交查询">
+            </form>
+            <form id="stuSelector">
+                <select><option>请输入班级</option> </select>
+                <input type="button" name="submit" value="提交查询">
+            </form>
+            <form id="actSelector">
+                <select id=""><option>请输入活动关键字</option></select>
+                <input type="button" name="submit" value="提交查询">
+            </form>
+        </div>
+    </div>
+
+
+    <div class="wrapper"></div>
+    <script type="text/javascript" src="TestAddress.js"></script>
+    <script type="text/javascript" src="TestChooseAddress.js"></script>
+    <SCRIPT LANGUAGE="JavaScript">loadProvince('440116');</SCRIPT>
+    <script src="js/background.js"></script>
+    <script src="js/person.js"></script>
+</body>
+</html>
