@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>主页</title>
+	<link rel="stylesheet" type="text/css" href="3.16/3.16/esri/css/esri.css">
+    <script type="text/javascript" src="3.16/3.16/init.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/three.min.js"></script>
@@ -21,7 +23,15 @@
             </ul>
         </nav>
         <div class="queryResult">
-            <div id="geo">这里放地图</div>
+            <div id="geo">
+				<form id="form1" runat="server">
+							<div id="mapshow"></div>
+                    <div id="geoInput">
+                        <input id="keystr" type="text" value="省份">
+                        <input id="Button1" type="button" value="搜 索" onclick="search(dojo.byId('keystr').value)">
+                    </div>
+				</form>
+			</div>
             <div id="cls">这里放班级信息</div>
             <div id="stu">这里放学生信息</div>
             <div id="act">这里放活动信息</div>
@@ -35,6 +45,7 @@
                 <input name="prov" id="prov" type="text" style="display: none;">
                 <input name="city" id="city" type="text" style="display: none;">
                 <input type="button" name="submit" value="提交查询">
+
             </form>
             <form id="clsSelector">
                 <select><option>请输入学号</option></select>

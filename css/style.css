@@ -233,18 +233,6 @@ canvas {position: fixed;top: 0;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*查询结果框结束*/
 #hpcontainer>nav{
     width: 18%;
@@ -314,6 +302,7 @@ canvas {position: fixed;top: 0;
     -webkit-appearance: none;
     appearance:none;
     background: url("../img/arrow.png") no-repeat right;
+    /*background-color: transparent;*/
     font-family:inherit;
     font-size: 12px;
     color: #fffef7;
@@ -323,6 +312,8 @@ canvas {position: fixed;top: 0;
     display: inline-block;
     padding-right: 10px;
 }
+
+
 
 .selector>form>select>option{
     background-color: transparent;
@@ -351,10 +342,43 @@ canvas {position: fixed;top: 0;
     padding-left: 30px;
 }
 
+/*把地图好好放在框框里*/
+/*地图你不要淘气*/
 
+#form1{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    right: 0;
+}
 
+#mapshow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border: solid #000 2px;
+}
 
+#geoInput{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
 
+#keystr{
+    float: left;
+    margin: 5px;
+}
 
-
-
+#Button1{
+    float: left;
+    margin: 5px;
+}
