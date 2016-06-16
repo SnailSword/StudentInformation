@@ -19,15 +19,15 @@ $password = ($_POST['password']);//MD5
 //包含数据库连接文件
 include('conn.php');
 //检测用户名及密码是否正确
-$check_query = mysql_query("select id,name from s_userinfo where name='$username'and password='$password'limit 1");
+$check_query = mysql_query("select id,name from userinfo where name='$username'and password='$password'limit 1");
 if($result = mysql_fetch_array($check_query)){//返回true
     //登录成功
     session_start();
-    $_SESSION['username'] =$result['name'];
+    $_SESSION['username'] =$result['name'];	
     $_SESSION['userid'] = $result['id'];
     
 	//系统主页
-    echo $username.' 欢迎你！进入交大测绘系学生信息系统！<script>window.location="#自动跳转主页.html"</script>
+    echo $username.' 欢迎你！进入交大测绘系学生信息系统！<script>window.location="my.html"</script>
 	<br />';
 	
 	//预放置主页页面顶端用户中心与注销登录

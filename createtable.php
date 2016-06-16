@@ -70,7 +70,7 @@ $query2='CREATE TABLE IF NOT EXISTS studentinfo(
 	class    CHAR(20) NOT NULL,
 	source   CHAR(20) NOT NULL,
 	sourceclass CHAR(20) NOT NULL,
-	perimage MediumBlob ,
+	perimage CHAR(50),
 	perweb   CHAR(20) ,
 	remark   CHAR(50))';
 	
@@ -104,7 +104,16 @@ $query5='CREATE TABLE IF NOT EXISTS personinfo(
 	image  MediumBlob ,
 	textdescrip   Text(600))';
 	//如表不存在则尝试新建表，如存在则不新建并返回true
-	if (mysql_query($query1, $dbc)&mysql_query($query2, $dbc)&mysql_query($query3, $dbc)&mysql_query($query4, $dbc)&mysql_query($query5, $dbc)) 
+
+//用户登录注册信息表
+	$query6='CREATE TABLE IF NOT EXISTS userinfo(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name     CHAR(20) NOT NULL,
+	password CHAR(20) NOT NULL,
+	email    CHAR(20) NOT NULL,
+	sex      CHAR(10) NOT NULL)';
+	
+	if (mysql_query($query1, $dbc)&mysql_query($query2, $dbc)&mysql_query($query3, $dbc)&mysql_query($query4, $dbc)&mysql_query($query5, $dbc)&mysql_query($query6, $dbc)) 
 	{
 		print '<p>The All table has been created!</p>';
 	} 

@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         //包含数据库连接文件
         include('conn.php');
         //检查用户名是否存在
-        $check_name = mysql_query("select name from s_userinfo where name='$name' limit 1");
+        $check_name = mysql_query("select name from userinfo where name='$name' limit 1");
 
         if($result1 = mysql_fetch_array($check_name))
         {
@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         }
         else
         {
-            $sql="insert into s_userinfo(id,name,password,email,sex) value(null,'$name','$password2','$email','$gender')";
+            $sql="insert into userinfo(id,name,password,email,sex) value(null,'$name','$password2','$email','$gender')";
             $query=mysql_query($sql);
             if(mysql_affected_rows())//验证是否插入成功
             {

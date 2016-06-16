@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
    {    //连接数据库
 		include('conn.php');
 		//定义查询并运行查询。用户名和邮箱是否一致！！
-	$check_query = mysql_query("select name from s_userinfo where name='$name'and email='$email'");
+	$check_query = mysql_query("select name from userinfo where name='$name'and email='$email'");
 	
 	if ($row = mysql_fetch_array($check_query)) 
 	{ 
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	    
 		if($password1==$password2)
 		{
-			$update=mysql_query("update s_userinfo set password='$password2' where name='$name'");
+			$update=mysql_query("update userinfo set password='$password2' where name='$name'");
 			if(mysql_affected_rows())//验证是否修改成功成功
 			{
 				$message= '<p>密码修改成功请牢记！<br>点击此处重新 <a href="login.html">登录!</a> </p>';

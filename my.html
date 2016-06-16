@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>主页</title>
-	<link rel="stylesheet" type="text/css" href="3.16/3.16/esri/css/esri.css">
-    <script type="text/javascript" src="3.16/3.16/init.js"></script>
+    <link rel="stylesheet" type="text/css" href="../arcgis_js_v316_api/arcgis_js_api/library/3.16/3.16/esri/css/esri.css">
+    <script type="text/javascript" src="../arcgis_js_v316_api/arcgis_js_api/library/3.16/3.16/init.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/three.min.js"></script>
@@ -26,33 +26,54 @@
             <div id="geo">
 				<form id="form1" runat="server">
 							<div id="mapshow"></div>
-                    <div id="geoInput">
+<!--                     <div id="geoInput">
                         <input id="keystr" type="text" value="省份">
                         <input id="Button1" type="button" value="搜 索" onclick="search(dojo.byId('keystr').value)">
-                    </div>
+                    </div> -->
 				</form>
 			</div>
-            <div id="cls">这里放班级信息</div>
+            <div id="cls">
+
+                
+
+                <div>
+                    <p>专业全称：</p>
+                    <p>人数：</p>
+                    <p>男生人数：</p>
+                    <p>女生人数：</p>
+                    <p>辅导员：</p>
+                    <p>导师：</p>
+                    <p>班级简介：</p>
+                    <p>班级网站：</p>
+                    <p>备注：</p>
+                </div>
+
+
+            </div>
             <div id="stu">这里放学生信息</div>
             <div id="act">这里放活动信息</div>
             <!--<div id="abt">这里放关于我们</div>-->
         </div>
         <div class="selector">
             <form id="geoSelector">
-                <select id="id_provSelect" name="provSelect" onChange="loadCity(this.value);"><option value="">请选择省份</option></select>&nbsp;
+<!--                 <select id="id_provSelect" name="provSelect" onChange="loadCity(this.value);"><option value="">请选择省份</option></select>&nbsp;
                 <select id="id_citySelect" name="citySelect" onChange="loadArea(this.value);"><option value="">请选择城市</option></select>&nbsp;
                 <select id="id_areaSelect" name="areaSelect"><option value="">请选择区域</option></select>&nbsp;
                 <input name="prov" id="prov" type="text" style="display: none;">
-                <input name="city" id="city" type="text" style="display: none;">
-                <input type="button" name="submit" value="提交查询">
+                <input name="city" id="city" type="text" style="display: none;"> -->
+                <!-- <input type="button" name="submit" value="提交查询"> -->
+
+                <input id="keystr" type="text" placeholder="省份" >
+                <input id="Button1" type="button" value="搜 索" onclick="search(dojo.byId('keystr').value)">
 
             </form>
             <form id="clsSelector">
-                <select><option>请输入学号</option></select>
+                <select><option>请选择年级</option></select>
+                <select><option>请选择班级</option></select>
                 <input type="button" name="submit" value="提交查询">
             </form>
             <form id="stuSelector">
-                <select><option>请输入班级</option> </select>
+                <select><option>请输入学号</option> </select>
                 <input type="button" name="submit" value="提交查询">
             </form>
             <form id="actSelector">
