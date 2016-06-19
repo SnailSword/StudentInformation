@@ -406,3 +406,55 @@ canvas {position: fixed;top: 0;
     float: left;
     margin: 5px;
 }
+
+/*---------------学生信息开始----------------------*/
+
+#stu .clsContent .tabs{
+    z-index: 9999;
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    top:0;
+    right: 0;
+    background-color: #a0a0a0;
+
+}
+
+#stu .clsContent .tabs ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+}
+
+#stu .clsContent .tabs li{
+    list-style: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------学生信息开始----------------------*/
