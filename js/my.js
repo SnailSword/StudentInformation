@@ -3,6 +3,7 @@
  */
 
 var currentSelect = 'geo';
+var currentSelectTab = 'Info1';
 
 $(document).ready(function () {
 
@@ -17,11 +18,14 @@ $(document).ready(function () {
         currentSelect = $(this).attr('id').slice(0,3);
         $('#' + currentSelect ).css("display", "block");
         $('#' + currentSelect + 'Selector').css("display", "block");
-
-
-
     });
-
+	$('#stu .clsContent .tabs li').bind("click", function () {
+		$(".activeTab").removeClass("activeTab");
+		$('.stu' + currentSelectTab).css("display", "none");
+		$(this).addClass("activeTab");
+		currentSelectTab = $(this).attr('class').slice(0,5);
+		$('.stu' + currentSelectTab).css("display", "block");
+	});
 }
 );
 
